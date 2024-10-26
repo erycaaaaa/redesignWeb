@@ -1,67 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Healthy Cooking & Recipes</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <style>
-    .navbar, .hero {
-      background-color: #5D7F3C; /* Coklat kehijauan */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Cooking & Design Inspiration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .navbar { background-color: #5c783f; color: #fff; }
+      .hero { background-color: #E3E6D4; color: #000000; }
+      .divider { border-top: 4px solid #6a8351; }
+      .btn-custom { background-color: #6a8351 !important; color: #fff !important; }
+      .product-section { background-color: transparent !important; padding: 40px 0; } /* background-color diubah menjadi transparent */
+      .grid-section { background-color: #E3E6D4; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+      .text-dark-green { color: #132705 !important; }
+      
+      .background {
+          position: fixed; 
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('./assets/bg.jpg'); 
+          background-size: cover;
+          background-position: center;
+          filter: blur(5px); 
+          z-index: -1; 
+      }
+      
+      .carousel-indicators .bg-success {
+        width: 10px;
+        height: 10px;
+        background-color: #6a8351 !important;
     }
-    .navbar .nav-link, .navbar .navbar-brand, .hero h1 {
-      color: #ffffff; /* Teks putih untuk kontras */
-    }
-    .hero p { color: #e0e0e0; } /* Teks deskripsi */
-    .btn-custom { background-color: #4A6B32; border-color: #4A6B32; } /* Warna tombol */
+ 
+ 
   </style>
+  
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Healthy Cooking & Recipes</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-          <li class="nav-item">
-            <a
-              class="nav-link"
-              href="https://wa.me/6285871154799?text=Halo!%20Saya%20tertarik%20untuk%20belajar%20lebih%20banyak%20tentang%20resep%20masakan%20sehat.%20Apakah%20ada%20tips%20yang%20bisa%20dibagikan?"
-              target="_blank"
-              >Contact</a
-            >
-          </li>
-          <li class="nav-item">
-            <button id="subscribeBtn" class="btn btn-custom text-white" onclick="toggleSubscription()">Subscribe</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <div class="background"></div> <!-- Background Image Div -->
 
-  <!-- Hero Section -->
-  <div class="hero py-5 text-center">
-    <div class="container">
-      <h1 class="fw-bold">Tasty & Healthy Organic Food</h1>
-      <p>Think with heart, embrace nature, and enjoy the best organic products.</p>
-      <a class="btn btn-custom btn-lg text-white" href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank">Learn More &gt;&gt;</a>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Healthy Cooking & Recipes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://wa.me/6285871154799?text=Halo!%20Saya%20tertarik%20untuk%20belajar%20lebih%20banyak%20tentang%20resep%20masakan%20sehat.%20Apakah%20ada%20tips%20yang%20bisa%20dibagikan?" target="_blank">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="subscribeBtn" class="btn btn-custom" onclick="toggleSubscription()">Subscribe</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Section Title Outside Modal -->
+<!-- Hero Section -->
+<div class="hero py-5 text-center">
+  <div class="container">
+      <h1 class="fw-bold text-dark-green">Energize Your Day with Healthy Choices</h1>
+      <p class="text-dark-green">Pilih berbagai referensi untuk mempelajari manfaat makanan sehat dan organik.</p>
+      <a class="btn btn-custom btn-lg text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a>
   </div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function toggleSubscription() {
-      const btn = document.getElementById("subscribeBtn");
-      btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
-    }
-  </script>
+
+<!-- Modal: Reference Links -->
+<div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <!-- Modal Header with Duplicate Title -->
+          <div class="modal-header">
+              <h1 class="modal-title fs-4 text-dark-green" id="referenceModalLabel">Referensi Makanan Sehat</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!-- Modal Body with Content -->
+          <div class="modal-body">
+              <p class="text-muted fs-5">Pilih salah satu link di bawah untuk mempelajari lebih lanjut tentang manfaat makanan sehat dan organik:</p>
+              <ul class="list-group">
+                  <li class="list-group-item">
+                      <h2 class="fs-5 text-dark-green">Halodoc</h2>
+                      <p class="mb-1">Pelajari lebih lanjut tentang berbagai jenis makanan sehat yang bermanfaat bagi tubuh Anda.</p>
+                      <a href="https://www.halodoc.com/kesehatan/makanan-sehat" target="_blank" class="text-dark-green">Kunjungi Halodoc</a>
+                  </li>
+                  <li class="list-group-item">
+                      <h2 class="fs-5 text-dark-green">Alodokter</h2>
+                      <p class="mb-1">Artikel ini menjelaskan berbagai manfaat makanan organik untuk kesehatan tubuh.</p>
+                      <a href="https://www.alodokter.com/manfaat-makanan-organik" target="_blank" class="text-dark-green">Kunjungi Alodokter</a>
+                  </li>
+                  <li class="list-group-item">
+                      <h2 class="fs-5 text-dark-green">KlikDokter</h2>
+                      <p class="mb-1">Temukan informasi mengenai kelebihan dan keunggulan dari makanan organik.</p>
+                      <a href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank" class="text-dark-green">Kunjungi KlikDokter</a>
+                  </li>
+              </ul>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Modal: Reference Links -->
+  <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-4 text-dark-green" id="referenceModalLabel">Referensi Makanan Sehat</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted fs-5">Pilih salah satu link di bawah untuk mempelajari lebih lanjut tentang manfaat makanan sehat dan organik:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h2 class="fs-5 text-dark-green">Halodoc</h2>
+                        <p class="mb-1">Pelajari lebih lanjut tentang berbagai jenis makanan sehat yang bermanfaat bagi tubuh Anda.</p>
+                        <a href="https://www.halodoc.com/kesehatan/makanan-sehat" target="_blank" class="text-dark-green">Kunjungi Halodoc</a>
+                    </li>
+                    <li class="list-group-item">
+                        <h2 class="fs-5 text-dark-green">Alodokter</h2>
+                        <p class="mb-1">Artikel ini menjelaskan berbagai manfaat makanan organik untuk kesehatan tubuh.</p>
+                        <a href="https://www.alodokter.com/manfaat-makanan-organik" target="_blank" class="text-dark-green">Kunjungi Alodokter</a>
+                    </li>
+                    <li class="list-group-item">
+                        <h2 class="fs-5 text-dark-green">KlikDokter</h2>
+                        <p class="mb-1">Temukan informasi mengenai kelebihan dan keunggulan dari makanan organik.</p>
+                        <a href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank" class="text-dark-green">Kunjungi KlikDokter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tips Section -->
+<div class="tips-section text-center mt-5">
+  <div class="container p-4 bg-light rounded">
+      <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
+      <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
+      
+    
+      <div class="row g-4 justify-content-center">
+      
+          <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                  <div class="card-body">
+                      <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
+                      <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
+                      <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success">Learn More &gt;&gt;</a>
+                  </div>
+              </div>
+          </div>
+   
+          <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                  <div class="card-body">
+                      <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
+                      <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
+                      <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success">Read More &gt;&gt;</a>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                  <div class="card-body">
+                      <h5 class="card-title text-dark-green">Hydration Habits</h5>
+                      <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
+                      <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success">See Hydration Tips &gt;&gt;</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function toggleSubscription() {
+    const btn = document.getElementById("subscribeBtn");
+    btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
+  }
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 </html>
