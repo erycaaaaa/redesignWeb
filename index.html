@@ -64,11 +64,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://wa.me/6285871154799?text=Halo!%20Saya%20tertarik%20untuk%20belajar%20lebih%20banyak%20tentang%20resep%20masakan%20sehat.%20Apakah%20ada%20tips%20yang%20bisa%20dibagikan?" target="_blank">Contact</a>
-                    </li>
+                  <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li><li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
                     <li class="nav-item">
                         <button id="subscribeBtn" class="btn btn-custom" onclick="toggleSubscription()">Subscribe</button>
                     </li>
@@ -80,7 +76,7 @@
 <!-- Section Title Outside Modal -->
 <!-- Hero Section -->
 <div class="hero py-5 text-center">
-  <div class="container">
+  <div class="container" id="home">
       <h1 class="fw-bold text-dark-green">Energize Your Day with Healthy Choices</h1>
       <p class="text-dark-green">Pilih berbagai referensi untuk mempelajari manfaat makanan sehat dan organik.</p>
       <a class="btn btn-custom btn-lg text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a>
@@ -125,44 +121,11 @@
   </div>
 </div>
 
-  <!-- Modal: Reference Links -->
-  <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-4 text-dark-green" id="referenceModalLabel">Referensi Makanan Sehat</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p class="text-muted fs-5">Pilih salah satu link di bawah untuk mempelajari lebih lanjut tentang manfaat makanan sehat dan organik:</p>
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <h2 class="fs-5 text-dark-green">Halodoc</h2>
-                        <p class="mb-1">Pelajari lebih lanjut tentang berbagai jenis makanan sehat yang bermanfaat bagi tubuh Anda.</p>
-                        <a href="https://www.halodoc.com/kesehatan/makanan-sehat" target="_blank" class="text-dark-green">Kunjungi Halodoc</a>
-                    </li>
-                    <li class="list-group-item">
-                        <h2 class="fs-5 text-dark-green">Alodokter</h2>
-                        <p class="mb-1">Artikel ini menjelaskan berbagai manfaat makanan organik untuk kesehatan tubuh.</p>
-                        <a href="https://www.alodokter.com/manfaat-makanan-organik" target="_blank" class="text-dark-green">Kunjungi Alodokter</a>
-                    </li>
-                    <li class="list-group-item">
-                        <h2 class="fs-5 text-dark-green">KlikDokter</h2>
-                        <p class="mb-1">Temukan informasi mengenai kelebihan dan keunggulan dari makanan organik.</p>
-                        <a href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank" class="text-dark-green">Kunjungi KlikDokter</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- Tips Section -->
 <div class="tips-section text-center mt-5">
-    <div class="container p-4 bg-light rounded">
+    <div class="container p-4 bg-light rounded" id="about">
         <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
         <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
         
@@ -174,7 +137,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
                         <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
-                        <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success">Learn More &gt;&gt;</a>
+                        <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success" target="_blank">Learn More </a>
                     </div>
                 </div>
             </div>
@@ -184,7 +147,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
                         <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
-                        <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success">Read More &gt;&gt;</a>
+                        <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success" target="_blank">Read More</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +157,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-dark-green">Hydration Habits</h5>
                         <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
-                        <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success">See Hydration Tips &gt;&gt;</a>
+                        <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success" target="_blank">See Hydration Tips</a>
                     </div>
                 </div>
             </div>
@@ -203,98 +166,182 @@
 </div>
 
      
-
 <!-- Product Section: Healthy Living, Happy Life -->
 <div class="product-section text-center mt-4">
   <div class="container grid-section p-4">
-      <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
-      <p class="text-muted fs-3 text-dark-green">"Find Joy in Healthy Choices Every Day."</p>
-      <div class="row g-4 justify-content-center" id="recipe-container">
-          <!-- Recipe Items -->
-          <div class="col-12 col-md-6 col-lg-3 recipe-item">
-              <div class="card h-100 shadow-sm">
-                  <img src="./assets/mg3.jpg" class="card-img-top" alt="Sprout Salad">
-                  <div class="card-body">
-                      <h5 class="card-title fs-3 text-dark-green">Nutritious dish with perilla leaves</h5>
-                      <p class="card-text fs-4 text-dark-green">A nutritious recipe perfect for your health.</p>
-                      <div class="rating text-warning fs-2">
-                          <span class="star" data-value="1">&#9733;</span>
-                          <span class="star" data-value="2">&#9733;</span>
-                          <span class="star" data-value="3">&#9733;</span>
-                          <span class="star" data-value="4">&#9733;</span>
-                          <span class="star" data-value="5">&#9733;</span>
-                      </div>
-                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
-                  </div>
-              </div>
+    <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
+    <p class="text-muted fs-3 text-dark-green">"Find Joy in Healthy Choices Every Day."</p>
+    
+    <div class="row g-4 justify-content-center" id="recipe-container">
+      
+      <!-- Recipe Item 1 -->
+      <div class="col-12 col-md-6 col-lg-3 recipe-item">
+        <div class="card h-100 shadow-sm">
+          <img src="./assets/mg3.jpg" class="card-img-top" alt="Sprout Salad">
+          <div class="card-body">
+            <h5 class="card-title fs-3 text-dark-green">Nutritious dish with perilla leaves</h5>
+            <p class="card-text fs-4 text-dark-green">A nutritious recipe perfect for your health.</p>
+            <div class="rating text-warning fs-2">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal1">Recipe</a>
           </div>
-
-          <!-- Additional recipe items with the same structure -->
-          <div class="col-12 col-md-6 col-lg-3 recipe-item">
-              <div class="card h-100 shadow-sm">
-                  <img src="./assets/mg1.jpg" class="card-img-top" alt="Swikiau">
-                  <div class="card-body">
-                      <h5 class="card-title fs-3 text-dark-green">Swikiau with Bok Choy and Chili Oil</h5>
-                      <p class="card-text fs-4 text-dark-green">Rich in vitamins, fiber, protein.</p>
-                      <div class="rating text-warning fs-2">
-                          <span class="star" data-value="1">&#9733;</span>
-                          <span class="star" data-value="2">&#9733;</span>
-                          <span class="star" data-value="3">&#9733;</span>
-                          <span class="star" data-value="4">&#9733;</span>
-                          <span class="star" data-value="5">&#9733;</span>
-                      </div>
-                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3 recipe-item">
-              <div class="card h-100 shadow-sm">
-                  <img src="./assets/mg5.jpg" class="card-img-top" alt="Sprout Salad">
-                  <div class="card-body">
-                      <h5 class="card-title fs-3 text-dark-green">Sprout Salad with Soft Boiled Eggs</h5>
-                      <p class="card-text fs-4 text-dark-green">Sprouts and eggs for essential vitamins.</p>
-                      <div class="rating text-warning fs-2">
-                          <span class="star" data-value="1">&#9733;</span>
-                          <span class="star" data-value="2">&#9733;</span>
-                          <span class="star" data-value="3">&#9733;</span>
-                          <span class="star" data-value="4">&#9733;</span>
-                          <span class="star" data-value="5">&#9733;</span>
-                      </div>
-                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
-                  </div>
-              </div>
-          </div>
-
-          <div class="col-12 col-md-6 col-lg-3 recipe-item">
-              <div class="card h-100 shadow-sm">
-                  <img src="./assets/mg6.jpg" class="card-img-top" alt="Celery Mushroom Salad">
-                  <div class="card-body">
-                      <h5 class="card-title fs-3 text-dark-green">Celery Mushroom Salad with Apples</h5>
-                      <p class="card-text fs-4 text-dark-green">Packed with nutrients and flavor.</p>
-                      <div class="rating text-warning fs-2">
-                          <span class="star" data-value="1">&#9733;</span>
-                          <span class="star" data-value="2">&#9733;</span>
-                          <span class="star" data-value="3">&#9733;</span>
-                          <span class="star" data-value="4">&#9733;</span>
-                          <span class="star" data-value="5">&#9733;</span>
-                      </div>
-                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
+      
+      <!-- Recipe Modal 1 -->
+      <div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel1">Nutritious Dish with Perilla Leaves</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h6><b>Ingredients:</b></h6>
+              <ul class="text-start ms-4">
+                <li>1 cup mixed greens (spinach, kale, perilla leaves)</li>
+                <li>1 boiled egg, halved</li>
+                <li>1/2 cup chickpeas (cooked or canned, drained)</li>
+                <li>1/4 cup cherry tomatoes, halved</li>
+                <li>1/4 cup cucumber, diced</li>
+                <li>1/4 cup celery, sliced</li>
+                <li>1 tbsp sunflower seeds</li>
+                <li>Salt and pepper, to taste</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tsp lemon juice</li>
+              </ul>
+              <h6 class="text-center"><b>Instructions:</b></h6>
+              <ol class="text-start ms-4">
+                <li>Wash and dry the mixed greens, perilla leaves, and vegetables.</li>
+                <li>Boil an egg for about 7-8 minutes, then slice it in half once cooled.</li>
+                <li>Layer the mixed greens on a plate and add chickpeas, tomatoes, cucumber, and celery.</li>
+                <li>Place the egg halves in the center, sprinkle sunflower seeds, and drizzle olive oil and lemon juice.</li>
+                <li>Season with salt and pepper to taste, and serve immediately.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Item 2 -->
+      <div class="col-12 col-md-6 col-lg-3 recipe-item">
+        <div class="card h-100 shadow-sm">
+          <img src="./assets/mg5.jpg" class="card-img-top" alt="Sprout Salad">
+          <div class="card-body">
+            <h5 class="card-title fs-3 text-dark-green">Sprout Salad with Soft Boiled Eggs</h5>
+            <p class="card-text fs-4 text-dark-green">Sprouts and eggs for essential vitamins.</p>
+            <div class="rating text-warning fs-2">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal2">Recipe</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Recipe Modal 2 -->
+      <div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel2">Salad dengan Telur, Kacang, Nangka, dan Selada</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h6><b>Ingredients:</b></h6>
+              <ul class="text-start ms-4">
+                <li>1 soft-boiled egg, halved</li>
+                <li>1/2 cup mixed nuts (e.g., almonds, cashews, or walnuts)</li>
+                <li>1/4 cup nangka, dipotong kecil-kecil</li>
+                <li>1 cup lettuce, torn into bite-sized pieces</li>
+                <li>Salt and pepper, to taste</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tsp lemon juice</li>
+              </ul>
+              <h6 class="text-center"><b>Instructions:</b></h6>
+              <ol class="text-start ms-4">
+                <li>Boil the egg for about 6 minutes to achieve a soft yolk. Once done, cool under cold water, peel, and slice in half.</li>
+                <li>In a mixing bowl, combine the lettuce and chopped nangka.</li>
+                <li>Add the mixed nuts and gently toss all ingredients together.</li>
+                <li>Place the egg halves on top of the salad.</li>
+                <li>Drizzle with olive oil and lemon juice.</li>
+                <li>Season with salt and pepper to taste, and serve immediately.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Item 3 -->
+      <div class="col-12 col-md-6 col-lg-3 recipe-item">
+        <div class="card h-100 shadow-sm">
+          <img src="./assets/mg6.jpg" class="card-img-top" alt="Celery Mushroom Salad">
+          <div class="card-body">
+            <h5 class="card-title fs-3 text-dark-green">Celery Mushroom Salad with Apples</h5>
+            <p class="card-text fs-4 text-dark-green">Packed with nutrients and flavor.</p>
+            <div class="rating text-warning fs-2">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal3">Recipe</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Modal 3 -->
+      <div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="recipeModalLabel3">Celery Mushroom Salad with Apples</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h6><b>Ingredients:</b></h6>
+              <ul class="text-start ms-4">
+                <li>1/2 cup boiled button mushrooms, sliced</li>
+                <li>1/4 cup apple, sliced</li>
+                <li>1/2 cup celery leaves, chopped</li>
+                <li>Salt and pepper, to taste</li>
+                <li>1 tbsp olive oil</li>
+                <li>1 tsp lemon juice</li>
+              </ul>
+              <h6 class="text-center"><b>Instructions:</b></h6>
+              <ol class="text-start ms-4">
+                <li>In a mixing bowl, combine the chopped celery leaves, sliced apples, and boiled button mushrooms.</li>
+                <li>Drizzle with olive oil and lemon juice.</li>
+                <li>Season with salt and pepper to taste, and gently toss to combine.</li>
+                <li>Transfer to a serving plate or bowl and enjoy immediately.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
+
+
 <div class="product-section text-center mt-4">
   <div class="container grid-section p-4">
       <h2 class="text-dark-green display-2 fw-bold">Daily Wellness Menu</h2>
       <p class="text-muted fs-3 text-dark-green">"Embrace Wellness with Nourishing Choices Every Day."</p>
-      <div class="row g-4 justify-content-center" id="recipe-container">
+      <div class="row g-6 justify-content-center" id="recipe-container">
       </div>
       <div class="container mt-4">
         <div class="grid-section">
@@ -351,8 +398,6 @@
   </div>
 </div>
 
-
-
     <!-- Subscription Script -->
     <script>
         function toggleSubscription() {
@@ -360,36 +405,24 @@
             btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
         }
     </script>
-    
-    <!-- Star Rating Script -->
     <script>
-        document.querySelectorAll('.rating .star').forEach(star => {
-            star.addEventListener('click', function() {
-                const ratingValue = this.getAttribute('data-value');
-                const ratingGroup = this.parentElement;
-
-                // Check if the same star is clicked
-                const currentRating = ratingGroup.querySelector('.star.selected');
-                if (currentRating && currentRating.getAttribute('data-value') === ratingValue) {
-                    // If the same star is clicked, remove all ratings
-                    ratingGroup.querySelectorAll('.star').forEach(s => {
-                        s.classList.remove('selected'); // Reset color
-                    });
-                } else {
-                    // Remove existing ratings
-                    ratingGroup.querySelectorAll('.star').forEach(s => {
-                        s.classList.remove('selected'); // Reset color
-                    });
-                    // Set the new rating
-                    for (let i = 0; i < ratingValue; i++) {
-                        ratingGroup.children[i].classList.add('selected'); // Set gold color for selected stars
-                    }
-                }
-                console.log(`You rated this recipe ${currentRating ? '0 star(s)!' : `${ratingValue} star(s)!`}`);
-            });
-        });
+      document.querySelectorAll('.rating .star').forEach(star => {
+          star.addEventListener('click', function() {
+              const ratingValue = parseInt(this.getAttribute('data-value'));
+              const ratingGroup = this.parentElement;
+    
+              // Reset semua bintang
+              ratingGroup.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
+    
+              // Tandai rating
+              Array.from(ratingGroup.children).slice(0, ratingValue).forEach(s => s.classList.add('selected'));
+    
+              // Umpan balik
+              console.log(`You rated this recipe ${ratingValue} star(s)!`);
+          });
+      });
     </script>
-
+    
     
 <!-- Footer -->
 <footer id="contact" class="bg-dark-green text-white py-4">
@@ -411,7 +444,6 @@
       </div>
   </div>
 </footer>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
  
