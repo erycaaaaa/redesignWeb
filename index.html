@@ -30,10 +30,23 @@
       .carousel-indicators .bg-success {
         width: 10px;
         height: 10px;
-        background-color: #6a8351 !important;
+        background-color: #6a8351 !important; /* Custom dark green color */
     }
- 
- 
+    .carousel-indicators .active {
+        background-color: #4b6a37 !important; /* Darker shade for active dot */
+    }
+    .carousel-inner .carousel-item {
+        padding-bottom: 20px; /* Additional space at the bottom of each item */
+    }
+      /* Star Rating Styles */
+      .star { cursor: pointer; font-size: 1.5rem; color: #ccc; }
+      .star:hover { color: gold; }
+      .selected { color: gold; }
+  
+      /* CSS untuk efek zoom pada gambar */
+      .img-container { overflow: hidden; }
+      .img-container img { transition: transform 0.5s ease; }
+      .img-container:hover img { transform: scale(1.2); }
   </style>
   
 </head>
@@ -147,39 +160,136 @@
 
 <!-- Tips Section -->
 <div class="tips-section text-center mt-5">
-  <div class="container p-4 bg-light rounded">
-      <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
-      <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
-      
-    
-      <div class="row g-4 justify-content-center">
-      
-          <div class="col-md-4">
+    <div class="container p-4 bg-light rounded">
+        <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
+        <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
+        
+        <!-- Row to Display 3 Tips Side by Side -->
+        <div class="row g-4 justify-content-center">
+            <!-- Tip 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
+                        <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
+                        <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success">Learn More &gt;&gt;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tip 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
+                        <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
+                        <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success">Read More &gt;&gt;</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Tip 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark-green">Hydration Habits</h5>
+                        <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
+                        <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success">See Hydration Tips &gt;&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+          <!-- Dots Pagination with Custom Color -->
+          <div class="carousel-indicators mb-3"> <!-- Added margin-bottom for spacing -->
+              <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="0" class="active bg-success" aria-current="true"></button>
+              <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="1" class="bg-success"></button>
+              <button type="button" data-bs-target="#tipsCarousel" data-bs-slide-to="2" class="bg-success"></button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Product Section: Healthy Living, Happy Life -->
+<div class="product-section text-center mt-4">
+  <div class="container grid-section p-4">
+      <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
+      <p class="text-muted fs-3 text-dark-green">"Find Joy in Healthy Choices Every Day."</p>
+      <div class="row g-4 justify-content-center" id="recipe-container">
+          <!-- Recipe Items -->
+          <div class="col-12 col-md-6 col-lg-3 recipe-item">
               <div class="card h-100 shadow-sm">
+                  <img src="./assets/mg3.jpg" class="card-img-top" alt="Sprout Salad">
                   <div class="card-body">
-                      <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
-                      <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
-                      <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success">Learn More &gt;&gt;</a>
+                      <h5 class="card-title fs-3 text-dark-green">Nutritious dish with perilla leaves</h5>
+                      <p class="card-text fs-4 text-dark-green">A nutritious recipe perfect for your health.</p>
+                      <div class="rating text-warning fs-2">
+                          <span class="star" data-value="1">&#9733;</span>
+                          <span class="star" data-value="2">&#9733;</span>
+                          <span class="star" data-value="3">&#9733;</span>
+                          <span class="star" data-value="4">&#9733;</span>
+                          <span class="star" data-value="5">&#9733;</span>
+                      </div>
+                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
                   </div>
               </div>
           </div>
-   
-          <div class="col-md-4">
+
+          <!-- Additional recipe items with the same structure -->
+          <div class="col-12 col-md-6 col-lg-3 recipe-item">
               <div class="card h-100 shadow-sm">
+                  <img src="./assets/mg1.jpg" class="card-img-top" alt="Swikiau">
                   <div class="card-body">
-                      <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
-                      <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
-                      <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success">Read More &gt;&gt;</a>
+                      <h5 class="card-title fs-3 text-dark-green">Swikiau with Bok Choy and Chili Oil</h5>
+                      <p class="card-text fs-4 text-dark-green">Rich in vitamins, fiber, protein.</p>
+                      <div class="rating text-warning fs-2">
+                          <span class="star" data-value="1">&#9733;</span>
+                          <span class="star" data-value="2">&#9733;</span>
+                          <span class="star" data-value="3">&#9733;</span>
+                          <span class="star" data-value="4">&#9733;</span>
+                          <span class="star" data-value="5">&#9733;</span>
+                      </div>
+                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
                   </div>
               </div>
           </div>
-      
-          <div class="col-md-4">
+
+          <div class="col-12 col-md-6 col-lg-3 recipe-item">
               <div class="card h-100 shadow-sm">
+                  <img src="./assets/mg5.jpg" class="card-img-top" alt="Sprout Salad">
                   <div class="card-body">
-                      <h5 class="card-title text-dark-green">Hydration Habits</h5>
-                      <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
-                      <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success">See Hydration Tips &gt;&gt;</a>
+                      <h5 class="card-title fs-3 text-dark-green">Sprout Salad with Soft Boiled Eggs</h5>
+                      <p class="card-text fs-4 text-dark-green">Sprouts and eggs for essential vitamins.</p>
+                      <div class="rating text-warning fs-2">
+                          <span class="star" data-value="1">&#9733;</span>
+                          <span class="star" data-value="2">&#9733;</span>
+                          <span class="star" data-value="3">&#9733;</span>
+                          <span class="star" data-value="4">&#9733;</span>
+                          <span class="star" data-value="5">&#9733;</span>
+                      </div>
+                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 recipe-item">
+              <div class="card h-100 shadow-sm">
+                  <img src="./assets/mg6.jpg" class="card-img-top" alt="Celery Mushroom Salad">
+                  <div class="card-body">
+                      <h5 class="card-title fs-3 text-dark-green">Celery Mushroom Salad with Apples</h5>
+                      <p class="card-text fs-4 text-dark-green">Packed with nutrients and flavor.</p>
+                      <div class="rating text-warning fs-2">
+                          <span class="star" data-value="1">&#9733;</span>
+                          <span class="star" data-value="2">&#9733;</span>
+                          <span class="star" data-value="3">&#9733;</span>
+                          <span class="star" data-value="4">&#9733;</span>
+                          <span class="star" data-value="5">&#9733;</span>
+                      </div>
+                      <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                      <a href="#" class="btn btn-lg btn-custom fs-4">Recipe</a>
                   </div>
               </div>
           </div>
@@ -187,12 +297,73 @@
   </div>
 </div>
 
-<script>
-  function toggleSubscription() {
-    const btn = document.getElementById("subscribeBtn");
-    btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
+
+
+
+    <!-- Subscription Script -->
+    <script>
+        function toggleSubscription() {
+            const btn = document.getElementById("subscribeBtn");
+            btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
+        }
+    </script>
+    
+    <!-- Star Rating Script -->
+    <script>
+        document.querySelectorAll('.rating .star').forEach(star => {
+            star.addEventListener('click', function() {
+                const ratingValue = this.getAttribute('data-value');
+                const ratingGroup = this.parentElement;
+
+                // Check if the same star is clicked
+                const currentRating = ratingGroup.querySelector('.star.selected');
+                if (currentRating && currentRating.getAttribute('data-value') === ratingValue) {
+                    // If the same star is clicked, remove all ratings
+                    ratingGroup.querySelectorAll('.star').forEach(s => {
+                        s.classList.remove('selected'); // Reset color
+                    });
+                } else {
+                    // Remove existing ratings
+                    ratingGroup.querySelectorAll('.star').forEach(s => {
+                        s.classList.remove('selected'); // Reset color
+                    });
+                    // Set the new rating
+                    for (let i = 0; i < ratingValue; i++) {
+                        ratingGroup.children[i].classList.add('selected'); // Set gold color for selected stars
+                    }
+                }
+                console.log(`You rated this recipe ${currentRating ? '0 star(s)!' : `${ratingValue} star(s)!`}`);
+            });
+        });
+    </script>
+ 
+
+    
+<!-- Footer -->
+<footer id="contact" class="bg-dark-green text-white py-4">
+  <div class="container">
+      <div class="row justify-content-around">
+          <!-- Healthy Lifestyle & Food Column -->
+          <div class="col-md-3 footer-column text-center mb-3">
+              <h3>Healthy Lifestyle & Food</h3>
+              <p>Your daily source of nutritious recipes and wellness tips.</p>
+              <p>Phone: (021) 1234567</p>
+              <p>Email: contact@lifestylevibes.com</p>
+          </div>
+      </div>
+      <!-- Copyright -->
+      <div class="text-center mt-4">
+          <p class="mb-0">&copy; 2023 Lifestyle Vibes. All Rights Reserved.</p>
+      </div>
+  </div>
+</footer>
+
+<!-- CSS Custom Color for Footer -->
+<style>
+  .bg-dark-green {
+      background-color: #5c783f; /* Warna hijau sesuai header */
   }
-</script>
+</style>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
