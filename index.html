@@ -1,458 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Cooking & Design Inspiration</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-      .navbar { background-color: #879479; color: #fff; }
-      .hero { background-color: #E3E6D4; color: #000000; }
-      .divider { border-top: 4px solid #6a8351; }
-      .btn-custom { background-color: #6a8351 !important; color: #fff !important; }
-      .product-section { background-color: transparent !important; padding: 40px 0; } /* background-color diubah menjadi transparent */
-      .grid-section { background-color: #f9fbf1; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-      .text-dark-green { color: #132705 !important; }
-      
-      .background {
-          position: fixed; 
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-image: url('./assets/bg.jpg'); 
-          background-size: cover;
-          background-position: center;
-          filter: blur(5px); 
-          z-index: -1; 
-      }
-      .bg-dark-green {
-        background-color: #5c783f;
-    }
-      .carousel-indicators .bg-success {
-        width: 10px;
-        height: 10px;
-        background-color: #6a8351 !important;
-    }
-    .carousel-indicators .active {
-        background-color: #4b6a37 !important;
-    }
-    .carousel-inner .carousel-item {
-        padding-bottom: 20px;
-    }
-      /* Star Rating Styles */
-      .star { cursor: pointer; font-size: 1rem; color: #ccc; }
-      .star:hover { color: gold; }
-      .selected { color: gold; }
-      .small-video {
-        width: 550px; 
-        height: 469px; 
-        margin: 0 auto;
-      }
-      @media (min-width: 458px) {
-        .small-video {
-          max-width: 300px;
-        }}
-      .img-container { overflow: hidden; }
-      .img-container img { transition: transform 0.5s ease; }
-      .img-container:hover img { transform: scale(1.2); }
-  </style>
-  
-</head>
-<body>
-    <div class="background"></div> <!-- Background Image Div -->
+         <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Healthy Cooking & Design Inspiration</title>
+              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+              <style>
+                .navbar { background-color: #879479; color: #fff; }
+                .hero { background-color: #E3E6D4; color: #000000; }
+                .divider { border-top: 4px solid #6a8351; }
+                .btn-custom { background-color: #6a8351 !important; color: #fff !important; }
+                .product-section { background-color: transparent !important; padding: 40px 0; } 
+                .grid-section { background-color: #f9fbf1; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+                .text-dark-green { color: #132705 !important; }
+                
+                .background {
+                    position: fixed; 
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('./assets/bg.jpg'); 
+                    background-size: cover;
+                    background-position: center;
+                    filter: blur(5px); 
+                    z-index: -1; }
+                .bg-dark-green {
+                  background-color: #5c783f;}
+                .carousel-indicators .bg-success {
+                  width: 10px;
+                  height: 10px;
+                  background-color: #6a8351 !important;}
+                .carousel-indicators .active {
+                  background-color: #4b6a37 !important;}
+                .carousel-inner .carousel-item {
+                  padding-bottom: 20px;}
+                .star { cursor: pointer; font-size: 1rem; color: #ccc; }
+                .star:hover { color: gold; }
+                .selected { color: gold; } 
+                .ratio-16x9 {
+                  max-width: 650px;}
+                .img-container { overflow: hidden; }
+                .img-container img { transition: transform 0.5s ease; }
+                .img-container:hover img { transform: scale(1.2); }
+            </style>
+         </head>
+  <body>
+      <div class="background"></div> 
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Healthy Cooking & Recipes</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li><li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-                    <li class="nav-item">
-                        <button id="subscribeBtn" class="btn btn-custom" onclick="toggleSubscription()">Subscribe</button>
-                    </li>
-                </ul>
-            </div>
+      <nav class="navbar navbar-expand-lg">
+          <div class="container">
+              <a class="navbar-brand fw-bold" href="#">Healthy Cooking & Recipes</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li><li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                      <li class="nav-item">
+                          <button id="subscribeBtn" class="btn btn-custom" onclick="toggleSubscription()">Subscribe</button>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <div class="hero py-5 text-center">
+        <div class="container" id="home">
+            <h1 class="fw-bold text-dark-green">Energize Your Day with Healthy Choices</h1>
+            <p class="text-dark-green">Pilih berbagai referensi untuk mempelajari manfaat makanan sehat dan organik.</p>
+            <a class="btn btn-custom btn-lg text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a>
         </div>
-    </nav>
-
-<!-- Section Title Outside Modal -->
-<!-- Hero Section -->
-<div class="hero py-5 text-center">
-  <div class="container" id="home">
-      <h1 class="fw-bold text-dark-green">Energize Your Day with Healthy Choices</h1>
-      <p class="text-dark-green">Pilih berbagai referensi untuk mempelajari manfaat makanan sehat dan organik.</p>
-      <a class="btn btn-custom btn-lg text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a>
-  </div>
-</div>
-
-
-<!-- Modal: Reference Links -->
-<div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content">
-          <!-- Modal Header with Duplicate Title -->
-          <div class="modal-header">
-              <h1 class="modal-title fs-4 text-dark-green" id="referenceModalLabel">Referensi Makanan Sehat</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <!-- Modal Body with Content -->
-          <div class="modal-body">
-              <p class="text-muted fs-5">Pilih salah satu link di bawah untuk mempelajari lebih lanjut tentang manfaat makanan sehat dan organik:</p>
-              <ul class="list-group">
-                  <li class="list-group-item">
-                      <h2 class="fs-5 text-dark-green">Halodoc</h2>
-                      <p class="mb-1">Pelajari lebih lanjut tentang berbagai jenis makanan sehat yang bermanfaat bagi tubuh Anda.</p>
-                      <a href="https://www.halodoc.com/kesehatan/makanan-sehat" target="_blank" class="text-dark-green">Kunjungi Halodoc</a>
-                  </li>
-                  <li class="list-group-item">
-                      <h2 class="fs-5 text-dark-green">Alodokter</h2>
-                      <p class="mb-1">Artikel ini menjelaskan berbagai manfaat makanan organik untuk kesehatan tubuh.</p>
-                      <a href="https://www.alodokter.com/manfaat-makanan-organik" target="_blank" class="text-dark-green">Kunjungi Alodokter</a>
-                  </li>
-                  <li class="list-group-item">
-                      <h2 class="fs-5 text-dark-green">KlikDokter</h2>
-                      <p class="mb-1">Temukan informasi mengenai kelebihan dan keunggulan dari makanan organik.</p>
-                      <a href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank" class="text-dark-green">Kunjungi KlikDokter</a>
-                  </li>
-              </ul>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
       </div>
-  </div>
-</div>
 
-
-
-<!-- Tips Section -->
-<div class="tips-section text-center mt-5">
-    <div class="container p-4 bg-light rounded" id="about">
-        <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
-        <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
-        
-        <!-- Row to Display 3 Tips Side by Side -->
-        <div class="row g-4 justify-content-center">
-            <!-- Tip 1 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
-                        <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
-                        <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success" target="_blank">Learn More </a>
-                    </div>
+      <!-- Modal: Reference Links -->
+      <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header with Duplicate Title -->
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4 text-dark-green" id="referenceModalLabel">Referensi Makanan Sehat</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-            <!-- Tip 2 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
-                        <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
-                        <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success" target="_blank">Read More</a>
-                    </div>
+                <!-- Modal Body with Content -->
+                <div class="modal-body">
+                    <p class="text-muted fs-5">Pilih salah satu link di bawah untuk mempelajari lebih lanjut tentang manfaat makanan sehat dan organik:</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h2 class="fs-5 text-dark-green">Halodoc</h2>
+                            <p class="mb-1">Pelajari lebih lanjut tentang berbagai jenis makanan sehat yang bermanfaat bagi tubuh Anda.</p>
+                            <a href="https://www.halodoc.com/kesehatan/makanan-sehat" target="_blank" class="text-dark-green">Kunjungi Halodoc</a>
+                        </li>
+                        <li class="list-group-item">
+                            <h2 class="fs-5 text-dark-green">Alodokter</h2>
+                            <p class="mb-1">Artikel ini menjelaskan fakta makanan organik lebih sehat daripada makanan biasa.</p>
+                            <a href="https://www.alodokter.com/makanan-organik-sudah-pasti-lebih-sehat" target="_blank" class="text-dark-green">Kunjungi Alodokter</a>
+                        </li>
+                        <li class="list-group-item">
+                            <h2 class="fs-5 text-dark-green">KlikDokter</h2>
+                            <p class="mb-1">Temukan informasi mengenai kelebihan dan keunggulan dari makanan organik.</p>
+                            <a href="https://www.klikdokter.com/gaya-hidup/diet-nutrisi/inilah-beberapa-kelebihan-makanan-organik" target="_blank" class="text-dark-green">Kunjungi KlikDokter</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <!-- Tip 3 -->
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-dark-green">Hydration Habits</h5>
-                        <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
-                        <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success" target="_blank">See Hydration Tips</a>
-                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-     
-<!-- Product Section: Healthy Living, Happy Life -->
-<div class="product-section text-center mt-4">
-  <div class="container grid-section p-4">
-    <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
-    <p class="text-muted fs-3 text-dark-green">"Find Joy in Healthy Choices Every Day."</p>
-    
-    <div class="row g-4 justify-content-center" id="recipe-container">
-      
-      <!-- Recipe Item 1 -->
-      <div class="col-12 col-md-6 col-lg-3 recipe-item">
-        <div class="card h-100 shadow-sm">
-          <img src="./assets/mg3.jpg" class="card-img-top" alt="Sprout Salad">
-          <div class="card-body">
-            <h5 class="card-title fs-3 text-dark-green">Nutritious dish with perilla leaves</h5>
-            <p class="card-text fs-4 text-dark-green">A nutritious recipe perfect for your health.</p>
-            <div class="rating text-warning fs-2">
-              <span class="star" data-value="1">&#9733;</span>
-              <span class="star" data-value="2">&#9733;</span>
-              <span class="star" data-value="3">&#9733;</span>
-              <span class="star" data-value="4">&#9733;</span>
-              <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal1">Recipe</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Recipe Modal 1 -->
-      <div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModalLabel1" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="recipeModalLabel1">Nutritious Dish with Perilla Leaves</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <h6><b>Ingredients:</b></h6>
-              <ul class="text-start ms-4">
-                <li>1 cup mixed greens (spinach, kale, perilla leaves)</li>
-                <li>1 boiled egg, halved</li>
-                <li>1/2 cup chickpeas (cooked or canned, drained)</li>
-                <li>1/4 cup cherry tomatoes, halved</li>
-                <li>1/4 cup cucumber, diced</li>
-                <li>1/4 cup celery, sliced</li>
-                <li>1 tbsp sunflower seeds</li>
-                <li>Salt and pepper, to taste</li>
-                <li>1 tbsp olive oil</li>
-                <li>1 tsp lemon juice</li>
-              </ul>
-              <h6 class="text-center"><b>Instructions:</b></h6>
-              <ol class="text-start ms-4">
-                <li>Wash and dry the mixed greens, perilla leaves, and vegetables.</li>
-                <li>Boil an egg for about 7-8 minutes, then slice it in half once cooled.</li>
-                <li>Layer the mixed greens on a plate and add chickpeas, tomatoes, cucumber, and celery.</li>
-                <li>Place the egg halves in the center, sprinkle sunflower seeds, and drizzle olive oil and lemon juice.</li>
-                <li>Season with salt and pepper to taste, and serve immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
       </div>
 
-      <!-- Recipe Item 2 -->
-      <div class="col-12 col-md-6 col-lg-3 recipe-item">
-        <div class="card h-100 shadow-sm">
-          <img src="./assets/mg5.jpg" class="card-img-top" alt="Sprout Salad">
-          <div class="card-body">
-            <h5 class="card-title fs-3 text-dark-green">Sprout Salad with Soft Boiled Eggs</h5>
-            <p class="card-text fs-4 text-dark-green">Sprouts and eggs for essential vitamins.</p>
-            <div class="rating text-warning fs-2">
-              <span class="star" data-value="1">&#9733;</span>
-              <span class="star" data-value="2">&#9733;</span>
-              <span class="star" data-value="3">&#9733;</span>
-              <span class="star" data-value="4">&#9733;</span>
-              <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal2">Recipe</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Recipe Modal 2 -->
-      <div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModalLabel2" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="recipeModalLabel2">Salad dengan Telur, Kacang, Nangka, dan Selada</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <h6><b>Ingredients:</b></h6>
-              <ul class="text-start ms-4">
-                <li>1 soft-boiled egg, halved</li>
-                <li>1/2 cup mixed nuts (e.g., almonds, cashews, or walnuts)</li>
-                <li>1/4 cup nangka, dipotong kecil-kecil</li>
-                <li>1 cup lettuce, torn into bite-sized pieces</li>
-                <li>Salt and pepper, to taste</li>
-                <li>1 tbsp olive oil</li>
-                <li>1 tsp lemon juice</li>
-              </ul>
-              <h6 class="text-center"><b>Instructions:</b></h6>
-              <ol class="text-start ms-4">
-                <li>Boil the egg for about 6 minutes to achieve a soft yolk. Once done, cool under cold water, peel, and slice in half.</li>
-                <li>In a mixing bowl, combine the lettuce and chopped nangka.</li>
-                <li>Add the mixed nuts and gently toss all ingredients together.</li>
-                <li>Place the egg halves on top of the salad.</li>
-                <li>Drizzle with olive oil and lemon juice.</li>
-                <li>Season with salt and pepper to taste, and serve immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Recipe Item 3 -->
-      <div class="col-12 col-md-6 col-lg-3 recipe-item">
-        <div class="card h-100 shadow-sm">
-          <img src="./assets/mg6.jpg" class="card-img-top" alt="Celery Mushroom Salad">
-          <div class="card-body">
-            <h5 class="card-title fs-3 text-dark-green">Celery Mushroom Salad with Apples</h5>
-            <p class="card-text fs-4 text-dark-green">Packed with nutrients and flavor.</p>
-            <div class="rating text-warning fs-2">
-              <span class="star" data-value="1">&#9733;</span>
-              <span class="star" data-value="2">&#9733;</span>
-              <span class="star" data-value="3">&#9733;</span>
-              <span class="star" data-value="4">&#9733;</span>
-              <span class="star" data-value="5">&#9733;</span>
-            </div>
-            <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
-            <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal3">Recipe</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Recipe Modal 3 -->
-      <div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModalLabel3" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="recipeModalLabel3">Celery Mushroom Salad with Apples</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <h6><b>Ingredients:</b></h6>
-              <ul class="text-start ms-4">
-                <li>1/2 cup boiled button mushrooms, sliced</li>
-                <li>1/4 cup apple, sliced</li>
-                <li>1/2 cup celery leaves, chopped</li>
-                <li>Salt and pepper, to taste</li>
-                <li>1 tbsp olive oil</li>
-                <li>1 tsp lemon juice</li>
-              </ul>
-              <h6 class="text-center"><b>Instructions:</b></h6>
-              <ol class="text-start ms-4">
-                <li>In a mixing bowl, combine the chopped celery leaves, sliced apples, and boiled button mushrooms.</li>
-                <li>Drizzle with olive oil and lemon juice.</li>
-                <li>Season with salt and pepper to taste, and gently toss to combine.</li>
-                <li>Transfer to a serving plate or bowl and enjoy immediately.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicator dots -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-  
-    <!-- Slides with Shared Class for YouTube Videos -->
-    <div class="carousel-inner">
-      <!-- General Slide Class -->
-      <div class="carousel-item active d-flex justify-content-center">
-        <div class="ratio ratio-16x9 video-frame">
-          <iframe src="https://www.youtube.com/embed/LzWb_P4lYgA" title="YouTube video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </div>
-      </div>
-  
-      <div class="carousel-item d-flex justify-content-center">
-        <div class="ratio ratio-16x9 video-frame">
-          <iframe src="https://www.youtube.com/embed/Lkl9_3-jX6c" title="YouTube video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </div>
-      </div>
-  
-      <div class="carousel-item d-flex justify-content-center">
-        <div class="ratio ratio-16x9 video-frame">
-          <iframe src="https://www.youtube.com/embed/VBlkJ0Xi9Ms" title="YouTube video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Navigation arrows -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  
-<div class="product-section text-center mt-4">
-  <div class="container grid-section p-4">
-      <h2 class="text-dark-green display-2 fw-bold">Daily Wellness Menu</h2>
-      <p class="text-muted fs-3 text-dark-green">"Embrace Wellness with Nourishing Choices Every Day."</p>
-      <div class="row g-6 justify-content-center" id="recipe-container">
-      </div>
-      <div class="container mt-4">
-        <div class="grid-section">
-            <p class="h4 fw-bold text-dark-green">Healthy Meal Ideas for Your Daily Routine</p>
-            <h3 class="text-dark-green">Inspirations for a Balanced Lifestyle</h3>
-            <div class="row g-2">
-
-                <script>
-                    const illustrationImages = [
-                        "mg1.jpg", "mg2.jpg", "mg3.jpg", "mg4.jpg",
-                        "mg5.jpg", "mg6.jpg", "mg7.jpg", "mg8.jpg"
-                    ];
-    
-                    illustrationImages.forEach((imgSrc, index) => {
-                        document.write(`
-                            <div class="col-3 img-container">
-                                <img src="./assets/${imgSrc}" alt="mg ${index + 1}" class="img-fluid rounded">
-                            </div>
-                        `);
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
-    
-  
-    <div class="container mt-4">
-      <div class="grid-section">
-          <p class="h4 fw-bold text-dark-green">Menu Lainnya</p>
-          <h3 class="text-dark-green">Good Food, Good Mood</h3>
-          <div class="row g-2">
-              <script>
-                  const images = [
-                      "img6.jpg", "img.jpg", "img0.jpg", "img1.jpg",
-                      "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg",
-                      "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg",
-                      "img10.jpg", "img11.jpg", "img12.jpg", "img13.jpg"
-                  ];
-  
-                  images.forEach((imgSrc, index) => {
-                      document.write(`
-                          <div class="col-3 img-container">
-                              <div class="img-wrapper">
-                                  <img src="./assets/${imgSrc}" alt="Profile ${index + 1}" class="img-fluid rounded">
-                              </div>
+      <!-- Tips Section -->
+      <div class="tips-section text-center mt-5">
+          <div class="container p-4 bg-light rounded" id="about">
+              <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
+              <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
+              
+              <!-- Row to Display 3 Tips Side by Side -->
+              <div class="row g-4 justify-content-center">
+                  <!-- Tip 1 -->
+                  <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                              <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
+                              <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
+                              <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success" target="_blank">Learn More </a>
                           </div>
-                      `);
-                  });
-              </script>
+                      </div>
+                  </div>
+                  <!-- Tip 2 -->
+                  <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                              <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
+                              <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
+                              <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success" target="_blank">Read More</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Tip 3 -->
+                  <div class="col-md-4">
+                      <div class="card h-100 shadow-sm">
+                          <div class="card-body">
+                              <h5 class="card-title text-dark-green">Hydration Habits</h5>
+                              <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
+                              <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success" target="_blank">See Hydration Tips</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
-  </div>
-      </div>
-  </div>
-</div>
 
-    <!-- Subscription Script -->
-    <script>
-        function toggleSubscription() {
-            const btn = document.getElementById("subscribeBtn");
-            btn.innerText = btn.innerText === "Subscribe" ? "Unsubscribe" : "Subscribe";
-        }
-    </script>
+      <!-- Product Section: Healthy Living, Happy Life -->
+      <div class="product-section text-center mt-4">
+        <div class="container grid-section p-4">
+          <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
+          <p class="text-muted fs-3 text-dark-green">"Find Joy in Healthy Choices Every Day."</p>
+
+          <div class="row g-4 justify-content-center" id="recipe-container">
+            <!-- Recipe Item 1 -->
+            <div class="col-12 col-md-6 col-lg-3 recipe-item">
+              <div class="card h-100 shadow-sm">
+                <img src="./assets/mg3.jpg" class="card-img-top" alt="Sprout Salad">
+                <div class="card-body">
+                  <h5 class="card-title fs-3 text-dark-green">Nutritious dish with perilla leaves</h5>
+                  <p class="card-text fs-4 text-dark-green">A nutritious recipe perfect for your health.</p>
+                  <div class="rating text-warning fs-2">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                  <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal1">Recipe</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recipe Modal 1 -->
+            <div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModalLabel1" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel1">Nutritious Dish with Perilla Leaves</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6><b>Ingredients:</b></h6>
+                    <ul class="text-start ms-4">
+                      <li>1 cup mixed greens (spinach, kale, perilla leaves)</li>
+                      <li>1 boiled egg, halved</li>
+                      <li>1/2 cup chickpeas (cooked or canned, drained)</li>
+                      <li>1/4 cup cherry tomatoes, halved</li>
+                      <li>1/4 cup cucumber, diced</li>
+                      <li>1/4 cup celery, sliced</li>
+                      <li>1 tbsp sunflower seeds</li>
+                      <li>Salt and pepper, to taste</li>
+                      <li>1 tbsp olive oil</li>
+                      <li>1 tsp lemon juice</li>
+                    </ul>
+                    <h6 class="text-center"><b>Instructions:</b></h6>
+                    <ol class="text-start ms-4">
+                      <li>Wash and dry the mixed greens, perilla leaves, and vegetables.</li>
+                      <li>Boil an egg for about 7-8 minutes, then slice it in half once cooled.</li>
+                      <li>Layer the mixed greens on a plate and add chickpeas, tomatoes, cucumber, and celery.</li>
+                      <li>Place the egg halves in the center, sprinkle sunflower seeds, and drizzle olive oil and lemon juice.</li>
+                      <li>Season with salt and pepper to taste, and serve immediately.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recipe Item 2 -->
+            <div class="col-12 col-md-6 col-lg-3 recipe-item">
+              <div class="card h-100 shadow-sm">
+                <img src="./assets/mg5.jpg" class="card-img-top" alt="Sprout Salad">
+                <div class="card-body">
+                  <h5 class="card-title fs-3 text-dark-green">Sprout Salad with Soft Boiled Eggs</h5>
+                  <p class="card-text fs-4 text-dark-green">Sprouts and eggs for essential vitamins.</p>
+                  <div class="rating text-warning fs-2">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                  <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal2">Recipe</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recipe Modal 2 -->
+            <div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel2">Sprout Salad with Soft Boiled Eggs</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6><b>Ingredients:</b></h6>
+                    <ul class="text-start ms-4">
+                      <li>1 soft-boiled egg, halved</li>
+                      <li>1/2 cup mixed nuts (e.g., almonds, cashews, or walnuts)</li>
+                      <li>1/4 cup nangka, cut into small pieces</li>
+                      <li>1 cup lettuce, torn into bite-sized pieces</li>
+                      <li>Salt and pepper, to taste</li>
+                      <li>1 tbsp olive oil</li>
+                      <li>1 tsp lemon juice</li>
+                    </ul>
+                    <h6 class="text-center"><b>Instructions:</b></h6>
+                    <ol class="text-start ms-4">
+                      <li>Boil the egg for about 6 minutes for a soft yolk. Cool under cold water, peel, and halve.</li>
+                      <li>In a mixing bowl, combine lettuce, chopped nangka, and mixed nuts.</li>
+                      <li>Top with egg halves, drizzle with olive oil and lemon juice.</li>
+                      <li>Season with salt and pepper to taste, and serve immediately.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recipe Item 3 -->
+            <div class="col-12 col-md-6 col-lg-3 recipe-item">
+              <div class="card h-100 shadow-sm">
+                <img src="./assets/mg6.jpg" class="card-img-top" alt="Celery Mushroom Salad">
+                <div class="card-body">
+                  <h5 class="card-title fs-3 text-dark-green">Celery Mushroom Salad with Apples</h5>
+                  <p class="card-text fs-4 text-dark-green">Packed with nutrients and flavor.</p>
+                  <div class="rating text-warning fs-2">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                  </div>
+                  <p class="card-text fs-5 text-dark-green"><small>5 mins | Easy | 1 person</small></p>
+                  <a href="#" class="btn btn-lg btn-custom fs-4" data-bs-toggle="modal" data-bs-target="#recipeModal3">Recipe</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recipe Modal 3 -->
+            <div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModalLabel3" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModalLabel3">Celery Mushroom Salad with Apples</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6><b>Ingredients:</b></h6>
+                    <ul class="text-start ms-4">
+                      <li>1/2 cup boiled button mushrooms, sliced</li>
+                      <li>1/4 cup apple, sliced</li>
+                      <li>1/2 cup celery leaves, chopped</li>
+                      <li>Salt and pepper, to taste</li>
+                      <li>1 tbsp olive oil</li>
+                      <li>1 tsp lemon juice</li>
+                    </ul>
+                    <h6 class="text-center"><b>Instructions:</b></h6>
+                    <ol class="text-start ms-4">
+                      <li>Combine celery leaves, apples, and mushrooms in a bowl.</li>
+                      <li>Drizzle with olive oil and lemon juice.</li>
+                      <li>Season with salt and pepper, and toss gently to combine.</li>
+                      <li>Serve immediately.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+ 
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicator dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      
+        <!-- Slides with YouTube Videos -->
+        <div class="carousel-inner container">
+          <div class="carousel-item active d-flex justify-content-center">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/LzWb_P4lYgA" title="YouTube video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+          </div>
+          <div class="carousel-item d-flex justify-content-center">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/Lkl9_3-jX6c" title="YouTube video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+          </div>
+          <div class="carousel-item d-flex justify-content-center">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/VBlkJ0Xi9Ms" title="YouTube video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Navigation arrows -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="product-section text-center mt-4">
+        <div class="container grid-section p-4">
+          <h2 class="text-dark-green display-2 fw-bold">Daily Wellness Menu</h2>
+          <p class="text-muted fs-3 text-dark-green">"Embrace Wellness with Nourishing Choices Every Day."</p>
+      
+          <div class="row g-6 justify-content-center" id="recipe-container">
+            <!-- KONTEN UNTUK RECIPE CONTAINER -->
+          </div>
+      
+          <div class="container mt-4">
+            <div class="grid-section">
+              <p class="h4 fw-bold text-dark-green">Healthy Meal Ideas for Your Daily Routine</p>
+              <h3 class="text-dark-green">Inspirations for a Balanced Lifestyle</h3>
+              <div class="row g-2">
+                <script>
+                  const illustrationImages = [
+                    "mg1.jpg", "mg2.jpg", "mg3.jpg", "mg4.jpg",
+                    "mg5.jpg", "mg6.jpg", "mg7.jpg", "mg8.jpg","mg9.jpg"
+                  ];
+      
+                  illustrationImages.forEach((imgSrc, index) => {
+                    document.write(`
+                      <div class="col-3 col-md-4 col-sm-6 img-container">
+                        <img src="./assets/${imgSrc}" alt="mg ${index + 1}" class="img-fluid rounded">
+                      </div>
+                    `);
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container mt-4">
+            <div class="grid-section">
+              <p class="h4 fw-bold text-dark-green">Menu Lainnya</p>
+              <h3 class="text-dark-green">Good Food, Good Mood</h3>
+              <div class="row g-2">
+                <script>
+                  const images = [
+                    "img6.jpg", "img.jpg", "img0.jpg", "img1.jpg",
+                    "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg",
+                    "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg",
+                    "img10.jpg", "img11.jpg", "img12.jpg"
+                  ];
+      
+                  images.forEach((imgSrc, index) => {
+                    document.write(`
+                      <div class="col-3 col-md-4 col-sm-6 img-container">
+                        <img src="./assets/${imgSrc}" alt="Profile ${index + 1}" class="img-fluid rounded">
+                      </div>
+                    `);
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
     <script>
       document.querySelectorAll('.rating .star').forEach(star => {
           star.addEventListener('click', function() {
@@ -470,30 +435,78 @@
           });
       });
     </script>
-    
-    
-<!-- Footer -->
-<footer id="contact" class="bg-dark-green text-white py-4">
-  <div class="container">
-      <div class="row justify-content-around">
+   <!-- Footer -->
+    <footer id="contact" class="bg-dark-green text-white py-4">
+      <div class="container">
+        <div class="row justify-content-around">
+          
           <!-- Healthy Lifestyle & Food Column -->
-          <div class="col-md-3 footer-column text-center mb-3">
-              <h3>Healthy Lifestyle & Food</h3>
-              <p>Your daily source of nutritious recipes and wellness tips.</p>
-              <p class="d-flex justify-content-center gap-2">
-                  <span>Contact: (021) 123567</span> |
-                  <span>Email: @GoodFood.com</span>
-              </p>
+          <div class="col-md-3 text-center mb-3">
+            <h3>Healthy Lifestyle & Food</h3>
+            <p>Your daily source of nutritious recipes and wellness tips.</p>
+            <p class="d-flex justify-content-center gap-2">
+              <span>Contact: (021) 123567</span> |
+              <span>Email: info@GoodFood.com</span>
+            </p>
           </div>
-      </div>
-      <!-- Copyright -->
-      <div class="text-center mt-4">
-          <p class="mb-0">&copy; 2023 Lifestyle Vibes. All Rights Reserved.</p>
-      </div>
-  </div>
-</footer>
 
+          <!-- Subscription Form Column -->
+          <div class="col-md-5">
+            <h4 class="text-center">Subscribe for Updates</h4>
+            <form class="d-flex flex-column align-items-center" id="subscribeForm" onsubmit="return handleSubscription(event)">
+              <div class="mb-3 w-100">
+                <label for="nameInput" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3 w-100">
+                <label for="emailInput" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="Enter your email" required>
+              </div>
+              <!-- Toggle Subscription Button -->
+              <button id="subscribeBtn" type="submit" class="btn btn-custom w-100">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-4">
+          <p class="mb-0">&copy; 2023 RIL4GUDFUDNGUDMUD. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Subscription Script -->
+    <script>
+      let isSubscribed = false; // Subscription status
+      function toggleSubscription() {
+        const btn = document.getElementById("subscribeBtn");
+        if (isSubscribed) {
+          alert("You have unsubscribed successfully.");
+          btn.innerText = "Subscribe";
+        } else {
+          alert("Thank you for subscribing! We will help you explore healthy menu options!");
+          btn.innerText = "Unsubscribe";
+        }
+        isSubscribed = !isSubscribed;
+      }
+      function handleSubscription(event) {
+        event.preventDefault();
+        const name = document.getElementById("nameInput").value;
+        const email = document.getElementById("emailInput").value;
+        const btn = document.getElementById("subscribeBtn");
+    
+        if (name && email) {
+          if (isSubscribed) {
+            alert("You have unsubscribed successfully.");
+            btn.innerText = "Subscribe";
+          } else {
+            alert("Thank you for subscribing! We will help you explore healthy menu options!");
+            btn.innerText = "Unsubscribe";
+          }
+          isSubscribed = !isSubscribed;
+        }
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
- 
 </body>
 </html>
