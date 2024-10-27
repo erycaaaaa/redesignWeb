@@ -47,7 +47,9 @@
          </head>
   <body>
       <!-- Background -->
-      <div class="background position-fixed w-100 h-100" style="background-image: url('./assets/bg.jpg'); background-size: cover; background-position: center; filter: blur(5px); z-index: -1;"></div>
+      <div class="background position-fixed w-100 h-100" 
+       style="background-image: url('./assets/bg.jpg'); background-size: cover; background-position: center; filter: blur(5px); z-index: -1;">
+      </div>
 
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
@@ -77,7 +79,6 @@
             <a class="btn btn-custom btn-sm text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a> <!-- Smaller button -->
         </div>
       </div>
-
 
       <!-- Modal: Reference Links -->
       <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
@@ -115,6 +116,7 @@
             </div>
         </div>
       </div>
+      
       <!-- Tips Section -->
       <div class="tips-section text-center mt-3">
         <div class="container p-2 rounded" id="about" style="background-color: #f9fbf1; max-width: 70%;">
@@ -156,12 +158,11 @@
             </div>
         </div>
 
-        <div class="text-center my-4">
-          <img src="./assets/cook.png" alt="Cooking Tips" style="position: absolute; top: 50%; left: 14%; transform: translate(-55%, -58%); z-index: 10; max-width: 350px; height: auto;">
+        <div class="text-center my-4 position-relative">
+          <img src="./assets/cook.png" alt="Cooking Tips" class="img-fluid position-absolute" style="top: 50%; left: 1%; transform: translateY(-80%); z-index: 10; max-width: 300px; height: auto;">
         </div>
         
       </div>
-
 
       <!-- Product Section: Healthy Living, Happy Life -->
       <div class="product-section text-center mt-4">
