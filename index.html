@@ -6,10 +6,10 @@
               <title>Healthy Cooking & Design Inspiration</title>
               <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
               <style>
-                .navbar { background-color: #879479; color: #fff; }
-                .hero { background-color: #E3E6D4; color: #000000; }
-                .divider { border-top: 4px solid #6a8351; }
-                .btn-custom { background-color: #6a8351 !important; color: #fff !important; }
+                .navbar { background-color: #879479; color:#f9fbf1; }
+                .hero { background-color:#f9fbf1; color: #000000; }
+                .divider { border-top: 4px solid#f9fbf1; }
+                .btn-custom { background-color: #6a8351 !important; color:#f9fbf1 !important; }
                 .product-section { background-color: transparent !important; padding: 40px 0; } 
                 .grid-section { background-color: #f9fbf1; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
                 .text-dark-green { color: #132705 !important; }
@@ -46,20 +46,23 @@
             </style>
          </head>
   <body>
-      <div class="background"></div> 
+      <!-- Background -->
+      <div class="background position-fixed w-100 h-100" style="background-image: url('./assets/bg.jpg'); background-size: cover; background-position: center; filter: blur(5px); z-index: -1;"></div>
 
-    <!-- Navbar -->
+      <!-- Navbar -->
       <nav class="navbar navbar-expand-lg">
           <div class="container">
-              <a class="navbar-brand fw-bold" href="#">Healthy Cooking & Recipes</a>
+              <a class="navbar-brand fw-bold fs-5" href="#">Healthy Cooking & Recipes</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li><li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li><li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                      <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
+                      <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
+                      <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
                       <li class="nav-item">
-                          <button id="subscribeBtn" class="btn btn-custom" onclick="toggleSubscription()">Subscribe</button>
+                          <button id="subscribeBtn" class="btn btn-custom btn-sm" onclick="toggleSubscription()">Subscribe</button>
                       </li>
                   </ul>
               </div>
@@ -67,13 +70,14 @@
       </nav>
 
       <!-- Hero Section -->
-      <div class="hero py-5 text-center">
-        <div class="container" id="home">
-            <h1 class="fw-bold text-dark-green">Energize Your Day with Healthy Choices</h1>
-            <p class="text-dark-green">Pilih berbagai referensi untuk mempelajari manfaat makanan sehat dan organik.</p>
-            <a class="btn btn-custom btn-lg text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a>
+      <div class="hero py-3 text-center"> <!-- Reduced top and bottom padding -->
+        <div class="container" id="home" style="max-width: 80%;">
+            <h1 class="fw-bold text-dark-green fs-3">Energize Your Day with Healthy Choices</h1> <!-- Smaller font size -->
+            <p class="text-dark-green fs-6">"Choose from a variety of resources to explore the benefits of healthy and organic foods."</p> <!-- Smaller font size -->
+            <a class="btn btn-custom btn-sm text-white" href="#" data-bs-toggle="modal" data-bs-target="#referenceModal">Learn More</a> <!-- Smaller button -->
         </div>
       </div>
+
 
       <!-- Modal: Reference Links -->
       <div class="modal fade" id="referenceModal" tabindex="-1" aria-labelledby="referenceModalLabel" aria-hidden="true">
@@ -111,50 +115,50 @@
             </div>
         </div>
       </div>
-
-      <!-- Tips Section -->
-      <div class="tips-section text-center mt-5">
-          <div class="container p-4 bg-light rounded" id="about">
-              <h2 class="text-dark-green fw-bold">Daily Tips for a Healthier Life</h2>
-              <p class="text-muted fs-4">Discover simple habits and nutritious foods to boost your well-being.</p>
-              
-              <!-- Row to Display 3 Tips Side by Side -->
-              <div class="row g-4 justify-content-center">
-                  <!-- Tip 1 -->
-                  <div class="col-md-4">
-                      <div class="card h-100 shadow-sm">
-                          <div class="card-body">
-                              <h5 class="card-title text-dark-green">Nutrient-Rich Foods</h5>
-                              <p class="card-text">Incorporate leafy greens, berries, and whole grains into your meals for essential vitamins and minerals.</p>
-                              <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="text-success" target="_blank">Learn More </a>
-                          </div>
-                      </div>
+<!-- Tips Section -->
+<div class="tips-section text-center mt-3">
+  <div class="container p-2 rounded" id="about" style="background-color: #f9fbf1; max-width: 70%;">
+      <h2 class="fw-bold fs-6" style="color: #132705;">Daily Tips for a Healthier Life</h2>
+      <p class="fs-7 mb-1" style="color: #333;">Discover simple habits and nutritious foods to boost your well-being.</p>
+      
+      <!-- Row to Display 3 Tips Side by Side -->
+      <div class="row g-1 justify-content-center">
+          <!-- Tip 1 -->
+          <div class="col-md-3 col-sm-4 mb-3">
+              <div class="card shadow-sm" style="font-size: 0.65rem; padding: 0.2rem; background-color: #fff;">
+                  <div class="card-body p-1">
+                      <h5 class="card-title fs-8 mb-1" style="color: #132705;">Nutrient-Rich Foods</h5>
+                      <p class="card-text mb-1" style="color: #333;">Incorporate leafy greens and whole grains into your meals for essential vitamins and minerals.</p>
+                      <a href="https://youtu.be/ZXGODaduznI?si=6Yt6IqWhs7kpktYs" class="fs-8" style="color: #6a8351;" target="_blank">Learn More</a>
                   </div>
-                  <!-- Tip 2 -->
-                  <div class="col-md-4">
-                      <div class="card h-100 shadow-sm">
-                          <div class="card-body">
-                              <h5 class="card-title text-dark-green">Balanced Meal Routine</h5>
-                              <p class="card-text">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
-                              <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="text-success" target="_blank">Read More</a>
-                          </div>
-                      </div>
+              </div>
+          </div>
+          <!-- Tip 2 -->
+          <div class="col-md-3 col-sm-4 mb-3">
+              <div class="card shadow-sm" style="font-size: 0.65rem; padding: 0.2rem; background-color:  #fff;">
+                  <div class="card-body p-1">
+                      <h5 class="card-title fs-8 mb-1" style="color: #132705;">Balanced Meal Routine</h5>
+                      <p class="card-text mb-1" style="color: #333;">Aim for balanced meals with protein, healthy fats, and complex carbs for steady energy.</p>
+                      <a href="https://youtu.be/81G22t2UHxA?si=e65wIXim03K8vaRE" class="fs-8" style="color: #6a8351;" target="_blank">Read More</a>
                   </div>
-                  <!-- Tip 3 -->
-                  <div class="col-md-4">
-                      <div class="card h-100 shadow-sm">
-                          <div class="card-body">
-                              <h5 class="card-title text-dark-green">Hydration Habits</h5>
-                              <p class="card-text">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
-                              <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="text-success" target="_blank">See Hydration Tips</a>
-                          </div>
-                      </div>
+              </div>
+          </div>
+          <!-- Tip 3 -->
+          <div class="col-md-3 col-sm-4 mb-3">
+              <div class="card shadow-sm" style="font-size: 0.65rem; padding: 0.2rem; background-color: #ffffff;">
+                  <div class="card-body p-1">
+                      <h5 class="card-title fs-8 mb-1" style="color: #132705;">Hydration Habits</h5>
+                      <p class="card-text mb-1" style="color: #333;">Drinking enough water daily supports digestion, skin health, and mental clarity.</p>
+                      <a href="https://youtu.be/lwOPaNMTGh8?si=cEfusYm3FKP-5esF" class="fs-8" style="color: #6a8351;" target="_blank">See Hydration Tips</a>
                   </div>
               </div>
           </div>
       </div>
+  </div>
+</div>
 
-      <!-- Product Section: Healthy Living, Happy Life -->
+
+<!-- Product Section: Healthy Living, Happy Life -->
       <div class="product-section text-center mt-4">
         <div class="container grid-section p-4">
           <h2 class="text-dark-green display-2 fw-bold">Healthy Living, Happy Life</h2>
@@ -323,31 +327,31 @@
  
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicator dots -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
       
-        <!-- Slides with YouTube Videos -->
-        <div class="carousel-inner container">
-          <div class="carousel-item active d-flex justify-content-center">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.youtube.com/embed/VBlkJ0Xi9Ms"title="YouTube video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <!-- Slides with YouTube Videos -->
+            <div class="carousel-inner container">
+              <div class="carousel-item active d-flex justify-content-center">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/VBlkJ0Xi9Ms"title="YouTube video 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+              </div>
+              <div class="carousel-item d-flex justify-content-center">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/Lkl9_3-jX6c" title="YouTube video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+              </div>
+              <div class="carousel-item d-flex justify-content-center">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/LzWb_P4lYgA" title="YouTube video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="carousel-item d-flex justify-content-center">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.youtube.com/embed/Lkl9_3-jX6c" title="YouTube video 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-          </div>
-          <div class="carousel-item d-flex justify-content-center">
-            <div class="ratio ratio-16x9">
-              <iframe src="https://www.youtube.com/embed/LzWb_P4lYgA" title="YouTube video 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-            </div>
-          </div>
-        </div>
-      
+          
         <!-- Navigation arrows -->
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
